@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+dist/
+.eslintrc.js
+webpack.config.js
+package.json
+package-lock.json
+assets/fonts/
+theme.json

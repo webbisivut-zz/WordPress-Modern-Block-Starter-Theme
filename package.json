@@ -10,9 +10,14 @@
     "browser-sync-webpack-plugin": "^2.3.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
+    "prettier": "2.6.2",
     "sass-loader": "^13.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.72.1",
@@ -20,7 +25,11 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch"
+    "dev": "webpack --mode development --watch",
+    "lint": "eslint --ext .js",
+    "prettier-write": "npx prettier --write .",
+    "prettier-check": "npx prettier --check .",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "babel": {
     "presets": [
